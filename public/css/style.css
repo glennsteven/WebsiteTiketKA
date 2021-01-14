@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    background-color: #fff;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    margin: 0;
+    margin-bottom: 250px;
+}
+/* navbar------------ */
+nav{
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+    height: 30px;
+}
+nav ul{
+    position: relative;
+    display: flex;
+    list-style: none;
+    margin: 20px;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+nav ul li a:hover{
+    color: blue;
+}
+.right-menu a{
+    margin: 0px 10px;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/* Gambar Slider----------------------*/
+.full-slider-box{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.f-slider-1{
+    background-image: url(../images/slide2.jpg);
+}
+.f-slider-2{
+    background-image: url(../images/slide5.jpg);
+}
+.f-slider-3{
+    background-image: url(../images/slider4.jpg);
+}
+.slider-text-container{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+.f-slider-text{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+.f-slider-text strong{
+    color: #ffffff;
+    font-size: 3.5rem;
+    line-height: 55px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+.f-slider-text span{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 500;
+    color: #44f6f6;
+    font-size: 1.5rem;
+}
+.f-slider-text strong font{
+    color: aqua;
+}
+
+/* Pemesanan Tiket--------------------- */
+.about-container{
+    top: -120px;
+    width: 80%;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: -7px auto 20px auto;
+    position: relative;
+}
+.box-pesan h1,
+.cari{
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 100px;
+    display: block;
+}
+.footer-wrapper{
+    width: 1100px;
+    margin: 0 auto;
+}
+.single-footer{
+    width: 33%;
+    float: left;
+    text-align: left;
+    color: #fff;
+}
+.single-footer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.single-footer ul a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+.single-footer p{
+    width: 80%;
+}
+footer{
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    background-color: #262626;
+}
+
+/* Humburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-toggle span{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: rgb(95, 95, 95);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Humberger Menu Animation*/
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: rgb(0, 0, 0);
+    transform: rotate(45deg) translate(-1.5px, -1.5px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: rgb(0, 0, 0);
+    transform: rotate(-45deg) translate(-1.5px, 1.5px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0)
+}
+
+/* responsive tablet */
+@media screen and (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+    .f-slider-text span{
+        font-size: 0.9rem;
+    }
+    .f-slider-text strong{
+        font-size: 2rem;
+        line-height: 40px;
+    }
+}
+
+/* Ukuran mobile */
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+    .f-slider-text span{
+        font-size: 1.2rem;
+    }
+    .f-slider-text strong{
+        font-size: 2rem;
+        line-height: 25px;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
